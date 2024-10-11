@@ -10,14 +10,29 @@ class VideoThumbnail extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Column(
       children: [
-        AspectRatio(
-          aspectRatio: 16 / 9, // Set the aspect ratio to 16:9
-          child:Image.network(
-            'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg',
-            fit: BoxFit.cover,
-            // Adjust how the image fits within the aspect ratio
-          ),
-          // Image.asset('assets/images/img.jpg',fit: BoxFit.fill,width: double.maxFinite),
+        Stack(
+          children: [
+
+            AspectRatio(
+              aspectRatio: 16 / 9, // Set the aspect ratio to 16:9
+              child:
+              FadeInImage.assetNetwork(
+                placeholder: 'assets/loading.gif',
+                fit: BoxFit.cover,
+                image: "https://m.media-amazon.com/images/M/MV5BODkwOTUxMDkyMV5BMl5BanBnXkFtZTgwOTA1MDQ0MjE@._V1_SY1000_SX677_AL_.jpg",
+              ),
+            ),
+             Positioned(
+              right: 5,
+                bottom: 2,
+                child: Container(
+                  padding: const EdgeInsets.all(3),
+                   decoration: BoxDecoration(
+                     borderRadius: BorderRadius.circular(5),
+                     color: Colors.black54,
+                   ),
+                    child: const Text("1:22:10",style: TextStyle(color: Colors.white),)))
+          ],
         ),
 
 
@@ -34,7 +49,7 @@ class VideoThumbnail extends StatelessWidget {
 
           },
           ),
-          title:  Text('Infinity Gamming Infinity Gamming Infinity Gamming Infinity Gamming Infinity Gamming Infinity Gamming ',
+          title:  Text('Hello Infinity Gamming Infinity Gamming Infinity Gamming Infinity Gamming Infinity Gamming Infinity Gamming ',
               style:state.themeData.textTheme.titleSmall,
           overflow: TextOverflow.ellipsis,maxLines: 2,),
           subtitle: Text(
