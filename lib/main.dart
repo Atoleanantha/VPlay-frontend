@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vplay_frontend/screens/home_screen.dart';
@@ -16,9 +17,12 @@ class MyApp extends StatelessWidget {
       child: BlocBuilder<ThemeBloc, ThemeState>(
         builder: (context, themeState) {
           return MaterialApp(
+            debugShowCheckedModeBanner: false,
             title: 'Theming with BLoC',
             theme: themeState.themeData,
-            home: HomeScreen(),
+            home:const Scaffold(
+              body: HomeScreen(),
+            ),
           );
         },
       ),
