@@ -36,10 +36,15 @@ class AppThemes {
           borderRadius: BorderRadius.circular(8),
         ),
       ),
-      overlayColor: MaterialStateProperty.all<Color>(Colors.grey.shade200),
+      overlayColor: WidgetStateProperty.all<Color>(Colors.grey.shade200),
     ),
 
-
+    filledButtonTheme: FilledButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor: WidgetStateProperty.all<Color>(Colors.red), // Red button color in light mode
+        foregroundColor: WidgetStateProperty.all<Color>(Colors.black), // Black text color
+      ),
+    ),
 
     appBarTheme: const AppBarTheme(
       backgroundColor: Colors.red,
@@ -117,9 +122,15 @@ class AppThemes {
           borderRadius: BorderRadius.circular(8),
         ),
       ),
-      overlayColor: MaterialStateProperty.all<Color>(Colors.grey.shade800),
+      overlayColor: WidgetStateProperty.all<Color>(Colors.grey.shade800),
     ),
 
+   filledButtonTheme: FilledButtonThemeData(
+     style: ButtonStyle(
+       backgroundColor: WidgetStateProperty.all<Color>(Colors.white), // White button color in dark mode
+       foregroundColor: WidgetStateProperty.all<Color>(Colors.black), // Black text color
+     ),
+   ),
     appBarTheme: const AppBarTheme(
       backgroundColor: Colors.black87,
       titleTextStyle: TextStyle(
@@ -139,7 +150,7 @@ class AppThemes {
         fontFamily: 'Roboto',
         fontSize: 20,
         fontWeight: FontWeight.bold,
-        color: Colors.white70,
+        color: Colors.white,
       ),
       titleSmall:  TextStyle(
         fontFamily: 'Roboto',
@@ -155,7 +166,7 @@ class AppThemes {
       bodyMedium: TextStyle(
         fontFamily: 'Roboto',
         fontSize: 14,
-        color: Colors.white70,
+        color: Colors.white,
       ),
     ),
   );

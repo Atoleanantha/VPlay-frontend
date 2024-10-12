@@ -17,7 +17,7 @@ class VideoThumbnail extends StatelessWidget {
               aspectRatio: 16 / 9, // Set the aspect ratio to 16:9
               child:
               FadeInImage.assetNetwork(
-                placeholder: 'assets/loading.gif',
+                placeholder: 'assets/images/load.webp',
                 fit: BoxFit.cover,
                 image: "https://m.media-amazon.com/images/M/MV5BODkwOTUxMDkyMV5BMl5BanBnXkFtZTgwOTA1MDQ0MjE@._V1_SY1000_SX677_AL_.jpg",
               ),

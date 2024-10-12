@@ -182,8 +182,6 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
 
 
 
-
-
 class CustomSearchDelegate extends SearchDelegate {
 
   ThemeState state;
