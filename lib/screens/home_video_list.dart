@@ -52,12 +52,55 @@ class HomeVideoList extends StatelessWidget {
                     // Navigator.push(context, MaterialPageRoute(builder: (context) => PlayVideoScreen(state: themeState,),fullscreenDialog: true));
                   },
                     child: VideoThumbnail(state: themeState,)),
-                VideoThumbnail(state: themeState,),
-                VideoThumbnail(state: themeState,),
-                VideoThumbnail(state: themeState,),
-                VideoThumbnail(state: themeState,),
-                VideoThumbnail(state: themeState,),
-                VideoThumbnail(state: themeState,),
+                InkWell(
+
+                  onTap: (){
+                    showModalBottomSheet(
+                      isScrollControlled: true,
+                      sheetAnimationStyle: AnimationStyle(
+                    duration: const Duration(seconds: 1),
+                    reverseDuration: const Duration(microseconds: 500),
+                    ),
+                        context: context, builder: (BuildContext context){
+
+                      return PlayVideoScreen(state: themeState,);
+                    });
+                    // Navigator.push(context, MaterialPageRoute(builder: (context) => PlayVideoScreen(state: themeState,),fullscreenDialog: true));
+                  },
+                    child: VideoThumbnail(state: themeState,)),
+                InkWell(
+
+                  onTap: (){
+                    showModalBottomSheet(
+                      isScrollControlled: true,
+                      sheetAnimationStyle: AnimationStyle(
+                    duration: const Duration(seconds: 1),
+                    reverseDuration: const Duration(microseconds: 500),
+                    ),
+                        context: context, builder: (BuildContext context){
+
+                      return PlayVideoScreen(state: themeState,);
+                    });
+                    // Navigator.push(context, MaterialPageRoute(builder: (context) => PlayVideoScreen(state: themeState,),fullscreenDialog: true));
+                  },
+                    child: VideoThumbnail(state: themeState,)),
+                InkWell(
+
+                  onTap: (){
+                    showModalBottomSheet(
+                      isScrollControlled: true,
+                      sheetAnimationStyle: AnimationStyle(
+                    duration: const Duration(seconds: 1),
+                    reverseDuration: const Duration(microseconds: 500),
+                    ),
+                        context: context, builder: (BuildContext context){
+
+                      return PlayVideoScreen(state: themeState,);
+                    });
+                    // Navigator.push(context, MaterialPageRoute(builder: (context) => PlayVideoScreen(state: themeState,),fullscreenDialog: true));
+                  },
+                    child: VideoThumbnail(state: themeState,)),
+
               ],
             )
         ))

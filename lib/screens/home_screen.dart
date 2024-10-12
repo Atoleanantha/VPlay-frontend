@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vplay_frontend/screens/home_video_list.dart';
+import 'package:vplay_frontend/screens/shorts_video_screen.dart';
 import 'package:vplay_frontend/widgets/video_thumbnail.dart';
 
 import '../bloc/theme/theme_bloc.dart';
@@ -43,14 +44,14 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
         child: BlocBuilder<ThemeBloc, ThemeState>(builder: (context, themeState) {
           final List<Widget> _pages = [
             HomeVideoList(themeState: themeState),
-            Center(child: Text('Videos Page')),
+            ShortsVideoScreen(themeState: themeState),
             Center(child: Text('Add Content Page')),
             Center(child: Text('Subscriptions Page')),
             Center(child: Text('Profile Page')),
           ];
           return MaterialApp(
               debugShowCheckedModeBanner: false,
-              title: 'Theming with BLoC',
+              title: 'VPlay',
               theme: themeState.themeData,
               home: Scaffold(
                 bottomNavigationBar: CurvedNavigationBar(
@@ -76,7 +77,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                   letIndexChange: (index) => true,
                 ),
                 appBar: AppBar(
-                  title: const Text('VPlay'),
+                  title:  const Text('VPlay',style: TextStyle(fontSize: 30),),
                   actions: [
                     IconButton(
                       onPressed: () {
